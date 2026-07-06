@@ -1,3 +1,5 @@
 .build
 .vscode
 *.xcodeproj
+build
+.DS_Store

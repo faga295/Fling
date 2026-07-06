@@ -107,6 +107,26 @@ xcodegen generate
 xcodebuild -project Fling.xcodeproj -scheme Fling -configuration Release build
 ```
 
+To export a `.app` from an archive:
+
+```bash
+xcodegen generate
+xcodebuild \
+  -project Fling.xcodeproj \
+  -scheme Fling \
+  -configuration Release \
+  -archivePath build/Fling.xcarchive \
+  archive
+
+xcodebuild \
+  -exportArchive \
+  -archivePath build/Fling.xcarchive \
+  -exportPath build/export \
+  -exportOptionsPlist ExportOptions.plist
+```
+
+The exported app will be placed under `build/export`.
+
 For distribution to other Macs, you will also need Developer ID signing and notarization.
 
 ## Requirements
