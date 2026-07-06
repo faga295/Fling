@@ -1,10 +1,10 @@
 # Fling
 
-Fling is a small macOS window manager for people who like fast keyboard control. It lives in the menu bar, opens a compact floating panel, and lets you move or resize the current window with a few keys.
+Fling is a small Vim-style macOS window manager for people who like fast keyboard control. It lives in the menu bar, opens a compact floating panel, and lets you move or resize the current window with familiar `h`, `j`, `k`, and `l` navigation keys.
 
 ## What You Can Do
 
-- Snap the current window to the left, right, top, or bottom half of the screen.
+- Snap the current window with Vim-style direction keys: `h`, `j`, `k`, and `l`.
 - Maximize the current window without entering macOS fullscreen.
 - Move a window to another display.
 - Cycle through visible windows while the panel is open.
@@ -32,19 +32,28 @@ Fling needs Accessibility permission because macOS only allows window managers t
 
 1. Focus the window you want to control.
 2. Press the `Activate panel` shortcut.
-3. Press a command key from the panel key table below.
+3. Press a Vim-style command key from the panel key table below.
 4. Keep using commands, cycle to another window, or dismiss the panel.
 
 The border highlight shows which window Fling is targeting.
 
-## Panel Keys
+The core movement model follows Vim navigation:
+
+```text
+h = left
+j = down
+k = up
+l = right
+```
+
+## Vim-Style Panel Keys
 
 | Key | Action |
 |-----|--------|
 | `h` | Snap target window to the left half |
-| `l` | Snap target window to the right half |
-| `k` | Snap target window to the top half |
 | `j` | Snap target window to the bottom half |
+| `k` | Snap target window to the top half |
+| `l` | Snap target window to the right half |
 | `Space` | Maximize target window |
 | `Shift+h` | Move target window to the previous display |
 | `Shift+l` | Move target window to the next display |
